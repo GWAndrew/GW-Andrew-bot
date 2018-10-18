@@ -34,19 +34,4 @@ async def on_message(message):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-bot.run("NDk1Mjk1NDIxODIwODI5Njk2.Dp0hOw.9u_SnrpX4PL7c4sEAddRrzAzRmo")
+bot.run("TOKEN")
