@@ -6,6 +6,8 @@ import chalk
 import random
 import time
 
+
+
 bot = commands.Bot(command_prefix='a!')
 
 @bot.event
@@ -34,4 +36,4 @@ async def on_message(message):
 
 
 
-bot.run("TOKEN")
+bot.run(os.getenv("TOKEN"))
