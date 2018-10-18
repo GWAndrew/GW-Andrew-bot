@@ -5,6 +5,7 @@ import asyncio
 import chalk
 import random
 import time
+import os
 
 Client = discord.Client()
 client = commands.Bot(command_prefix = "a!")
