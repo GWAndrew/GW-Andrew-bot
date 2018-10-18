@@ -5,8 +5,6 @@ import asyncio
 import chalk
 import random
 import time
-import os
-
 
 bot = commands.Bot(command_prefix='a!')
 
@@ -24,16 +22,4 @@ async def on_message(message):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-bot.run(os.getenv('TOKEN'))
+bot.run("TOKEN")
