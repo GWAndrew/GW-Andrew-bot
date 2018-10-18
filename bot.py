@@ -20,4 +20,4 @@ async def on_message(message):
 	msg = 'ARE YOU A DOG'
 	await client.send_message(message.channel, msg)
 
-client.run(os.getenv('TOKEN'))
+client.run(os.getenv('NDk1Mjk1NDIxODIwODI5Njk2.DqpVTg.yhX5_SDVtSgt3NZsT9XQM6TjUJk'))
