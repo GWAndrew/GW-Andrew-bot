@@ -6,20 +6,17 @@ import chalk
 import random
 import time
 
-bot = commands.Bot(command_prefix='a!')
-
-@bot.event
+Client = discord.Client()
+client = commands.Bot(command_prefix = "a!")
+@client.event
 async def on_ready():
-    print ("Connected")
+	print ("Connected")
+	await client.change_presence(game = discord.Game(name="Testing"))
 
-@bot.event
+@client.event
 async def on_message(message):
-    if message.content == "a!random":
-        random_number = random.randint(0,1000)
-        await bot.send_message(message.channel,random_number)
+	if message.content.starswith('oof')
+	msg = 'ARE YOU A DOG'
+	await client.send_message(message.channel, msg)
 
-
-
-
-
-bot.run("TOKEN")
+client.run(os.getenv('TOKEN'))
