@@ -13,8 +13,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-	if message.content == ('oof'):
+	if message.content.upper() == ('OOF'):
 		msg = 'ARE YOU A DOG'
 		await client.send_message(message.channel, msg)
 
+		
+				
 client.run(os.getenv('TOKEN'))
