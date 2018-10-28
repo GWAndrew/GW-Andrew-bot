@@ -9,7 +9,7 @@ client = commands.Bot(command_prefix = "a!")
 @client.event
 async def on_ready():
 	print ("Connected")
-	await client.change_presence(game = discord.Game(name="Testing"))
+	await client.change_presence(game = discord.Game(name="Prefix : a!"))
 
 @client.event
 async def on_message(message):
