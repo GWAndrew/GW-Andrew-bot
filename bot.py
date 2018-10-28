@@ -16,10 +16,5 @@ async def on_message(message):
 	if message.content.upper() == ('OOF'):
 		msg = 'ARE YOU A DOG'
 		await client.send_message(message.channel, msg)
-	if message.content.upper() == ('SPAM'):
-		while True:
-			await client.send_message(message.channel, "OOF")
-
-		
 				
 client.run(os.getenv('TOKEN'))
