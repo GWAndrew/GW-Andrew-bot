@@ -16,10 +16,10 @@ async def on_ready():
 
 @client.event
 async def on_message(message):
-	if "TRILLION COUNT XDDDDDDDDDDDDDDD 123456789" in message.content.upper():
+	if message.content =="TRILLION COUNT XDDDDDDDDDDDDDDD 123456789":
 		a = 0
 		while a != 123456789:
 			await client.send_message(message.channel, a)
 			a = a + 1
             
-client.run(os.getenv("TKEN"))
+client.run(os.getenv("TOKEN"))
