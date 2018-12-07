@@ -22,4 +22,4 @@ async def on_message(message):
 			await client.send_message(message.channel, a)
 			a = a + 1
             
-client.run(os.getenv("TOKEN"))
+client.run(os.getenv("TKEN"))
