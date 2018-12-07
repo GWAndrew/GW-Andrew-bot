@@ -6,7 +6,7 @@ import time
 import os
 
 Client = discord.Client()
-Client = commands.Bot(command_prefix = "lmao!")
+client = commands.Bot(command_prefix = "lmao!")
 
 
 @client.event
