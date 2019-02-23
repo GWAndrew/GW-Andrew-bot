@@ -34,4 +34,4 @@ async def on_member_join(member):
 async def on_message(message):
 	await bot.process_commands(message)
        
-bot.run(os.getenv(""))
+bot.run(os.getenv("TOKEN"))
