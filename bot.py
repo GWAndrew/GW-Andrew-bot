@@ -2,24 +2,36 @@ import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 import asyncio
-import time
 import os
+import random
+import time
+import json
 
-Client = discord.Client()
-client = commands.Bot(command_prefix = "lmao!")
+
+os.system('color 0A')
 
 
-@client.event
+bot = commands.Bot(command_prefix = "s!")
+@bot.event
 async def on_ready():
-    await client.change_presence(game=discord.Game(name='Prefix is lmao!'))
-    print('launched')
+	print ("Connected")
 
-@client.event
+
+@bot.event
+async def on_member_join(member):
+
+	channel = bot.get_channel("531157558828990504")
+	await bot.send_message(channel, "Welcome on my server, I hope you will have a nice day here, Not forget to read the rules :wink: {} :joy:". format(member.mention))
+	print ("Nouveau membre : {}".format(member))
+
+	role = discord.utils.get(member.server.roles, name="™️Members™️")
+	await bot.add_roles(member, role)
+	print ("Role Members a été ajouté à : {}".format(member))
+
+
+
+@bot.event
 async def on_message(message):
-	if message.content =="TRILLION COUNT XDDDDDDDDDDDDDDD 123456789":
-		a = 0
-		while a != 123456789:
-			await client.send_message(message.channel, a)
-			a = a + 1
-            
-client.run(os.getenv("TOKEN"))
+	await bot.process_commands(message)
+       
+bot.run(os.getenv("TOKEN"))
