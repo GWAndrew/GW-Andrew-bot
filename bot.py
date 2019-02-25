@@ -11,7 +11,7 @@ import json
 os.system('color 0A')
 
 
-bot = commands.Bot(command_prefix = "s!")
+bot = commands.Bot(command_prefix = "a!")
 @bot.event
 async def on_ready():
 	print ("Connected")
