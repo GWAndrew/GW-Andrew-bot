@@ -33,5 +33,13 @@ async def on_member_join(member):
 @bot.event
 async def on_message(message):
 	await bot.process_commands(message)
+	
+	
+@bot.command(pass_context = True)
+async def ping(ctx):
+    resp = await bot.say('Ping :')
+    diff = resp.timestamp - ctx.message.timestamp
+    await bot.say(f"{1000*diff.total_seconds():.1f}ms")
+    print ("Ping")
        
-bot.run(os.getenv(""))
+bot.run(os.getenv("TOKEN"))
