@@ -39,4 +39,4 @@ async def ping(ctx):
     await bot.say(f"{1000*diff.total_seconds():.1f}ms")
     print ("Ping")
        
-bot.run(os.getenv("TOKEN"))
+bot.run(os.getenv(""))
