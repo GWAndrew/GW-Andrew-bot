@@ -21,7 +21,7 @@ async def on_member_join(member):
 
 	role = discord.utils.get(member.server.roles, name="™️Members™️")
 	await bot.add_roles(member, role)
-	print ("Role Members a été ajouté à : {}".format(member))
+	print ("Role Members as been added to : {}".format(member))
 
 @bot.event
 async def on_member_remove(member):
