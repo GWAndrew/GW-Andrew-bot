@@ -7,19 +7,14 @@ import random
 import time
 import json
 
-
-os.system('color 0A')
-
-
 bot = commands.Bot(command_prefix = "a!")
+
 @bot.event
 async def on_ready():
 	print ("Connected")
 
-
 @bot.event
 async def on_member_join(member):
-
 	channel = bot.get_channel("531157558828990504")
 	await bot.send_message(channel, "Welcome on my server, I hope you will have a nice day here, Not forget to read the rules :wink: {} :joy:". format(member.mention))
 	print ("Nouveau membre : {}".format(member))
@@ -28,13 +23,15 @@ async def on_member_join(member):
 	await bot.add_roles(member, role)
 	print ("Role Members a été ajouté à : {}".format(member))
 
-
+@bot.event
+async def on_member_remove(member):
+	channel = bot.get_channel("531157558828990504")
+	await bot.send_message(channel, "{} Just leave the server, good bye :confused:". format(member))
 
 @bot.event
 async def on_message(message):
 	await bot.process_commands(message)
-	
-	
+		
 @bot.command(pass_context = True)
 async def ping(ctx):
     resp = await bot.say('Ping :')
