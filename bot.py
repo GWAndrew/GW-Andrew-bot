@@ -10,6 +10,14 @@ import json
 #colors
 color_list = [0xff0000,0x00ff00,0xffff00,0x0000ff,0xff00ff,0x00ffff,0xffffff]
 
+#poop pics
+poop_pics=["https://miro.medium.com/max/1050/1*p_f8-fZS6VBeVzLWK-RXqw.png",
+"http://cdn.shopify.com/s/files/1/1061/1924/products/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_grande.png?v=1480481059",
+"https://static.fnac-static.com/multimedia/Images/69/69/BA/9F/10467945-1505-1540-1/tsp20181206124851/Horloge-Emoji-Caca-Poop.jpg",
+"https://s7.orientaltrading.com/is/image/OrientalTrading/13798019?$PDP_VIEWER_IMAGE$",
+"https://cdn.shopify.com/s/files/1/1102/7446/products/NKX12948-Gold-The-Poop-Emoji-Necklace_1100x.jpg?v=1540190890",
+"https://www.petpooskiddoo.com/wp-content/uploads/2015/09/perfect_poop.png"]
+
 
 bot = commands.Bot(command_prefix = "a!")
 
@@ -82,8 +90,13 @@ async def gay_on_error(error,ctx):
 		loop=loop+1
 		await asyncio.sleep(2)
 
-		
-		
+@bot.command()
+async def poop():
+	e = discord.Embed(color=0x663300)
+	print ("poop sent")
+	e.set_image(url=random.choice(poop_pics))
+	await bot.say(embed=e)
+
 		
 		
 #COLOR ROLES
