@@ -237,18 +237,18 @@ async def red(ctx):
 
 
 
-#Rose
+#pink
 @bot.command(pass_context=True)
-async def rose(ctx):
+async def pink(ctx):
 	user = ctx.message.author
-	role = discord.utils.get(user.server.roles, name="Rose")
-	if "rose" in [y.name.lower() for y in ctx.message.author.roles]:
+	role = discord.utils.get(user.server.roles, name="Pink")
+	if "pink" in [y.name.lower() for y in ctx.message.author.roles]:
 		await bot.remove_roles(user,role)
-		embed=discord.Embed(title="{}, COLOR REMOVED : ROSE".format(ctx.message.author), color=0xfc2670)
+		embed=discord.Embed(title="{}, COLOR REMOVED : PINK".format(ctx.message.author), color=0xfc2670)
 		await bot.say(embed=embed)
 	else :
 		await bot.add_roles(user, role)
-		embed=discord.Embed(title="{}, COLOR ADDED : ROSE".format(ctx.message.author), color=0xfc2670)
+		embed=discord.Embed(title="{}, COLOR ADDED : PINK".format(ctx.message.author), color=0xfc2670)
 		await bot.say(embed=embed)
 
 
