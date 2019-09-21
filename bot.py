@@ -59,6 +59,8 @@ async def gay(ctx, arg1):
 	user=arg1
 	if user is not bot.user:
 		random_number=random.randint(0,100)
+		if user.id=="504973571211132930":
+			random_number==100
 		random_color=random.choice(color_list)
 		embed=discord.Embed(title=":gay_pride_flag: GAY RATE :gay_pride_flag:",description="{} IS {}% GAY".format(arg1, random_number), color=random_color)
 		msg = await ctx.bot.say(embed=embed)
