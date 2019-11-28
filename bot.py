@@ -274,6 +274,7 @@ async def pink(ctx):
 async def dm(ctx):
 	user=await bot.get_user_info("428516895919046667")
 	await bot.send_message(user, "SUKA BLYAT")
+	print("spam")
 	await asyncio.sleep(1)
 	
     # This works ^
