@@ -1,0 +1,1 @@
+I made this bot 2 years ago for my own discord server for fun in the old discord.py version so this code doesn't work in the rewrite new version, you can still see what is looks like it's really just for fun and testing ahah :)
